@@ -32,7 +32,7 @@ dependencies {
 
 
 application {
-    mainClass.set("io.github.irishshagua.AdventOfCode2020Command")
+    mainClass.set("io.github.irishshagua.AdventOfCode2020App")
 }
 
 java {
@@ -40,8 +40,10 @@ java {
     targetCompatibility = JavaVersion.toVersion("15")
 }
 
-tasks {
-
-
+tasks.withType(JavaCompile) {
+    options.compilerArgs += "--enable-preview"
 }
 
+tasks.withType(JavaExec) {
+    jvmArgs += '--enable-preview'
+}
