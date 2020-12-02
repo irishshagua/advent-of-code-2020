@@ -7,6 +7,8 @@ import io.github.irishshagua.tasks.challenge.Day1ReportRepair;
 import io.github.irishshagua.tasks.TaskDetails;
 import io.github.irishshagua.tasks.TaskResult;
 import io.github.irishshagua.tasks.challenge.Day1ReportRepairPart2;
+import io.github.irishshagua.tasks.challenge.Day2PasswordPhilosophy;
+import io.github.irishshagua.tasks.challenge.Day2PasswordPhilosophyPart2;
 
 import java.nio.file.Paths;
 import java.time.Duration;
@@ -24,6 +26,16 @@ public class TaskRunner {
                     Paths.get("tasks/Day1ReportRepairPart2.desc"),
                     Paths.get("tasks/Day1ReportRepair.input"),
                     new Day1ReportRepairPart2()
+            ),
+            3, new TaskDetails(
+                    Paths.get("tasks/Day2PasswordPhilosophy.desc"),
+                    Paths.get("tasks/Day2PasswordPhilosophy.input"),
+                    new Day2PasswordPhilosophy()
+            ),
+            4, new TaskDetails(
+                    Paths.get("tasks/Day2PasswordPhilosophyPart2.desc"),
+                    Paths.get("tasks/Day2PasswordPhilosophy.input"),
+                    new Day2PasswordPhilosophyPart2()
             )
     );
 
