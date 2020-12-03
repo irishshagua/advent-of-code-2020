@@ -23,6 +23,11 @@ public class Output {
         }
     }
 
+    public static void logException(String msg, Throwable t) {
+        System.out.println(formatMsgForConsole(msg, LogLevel.ERROR));
+        LOG.error(msg, t);
+    }
+
     private static String formatMsgForConsole(String msg, LogLevel logLevel) {
         String formatted = switch (logLevel) {
             case INFO -> CommandLine.Help.Ansi.AUTO.string(String.format("@|white %s|@", msg));

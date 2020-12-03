@@ -1,16 +1,11 @@
 package io.github.irishshagua.app.exceptions;
 
-public class TaskNotDocumentedException extends Exception {
+public class TaskNotDocumentedException extends RuntimeException {
 
     private Integer taskNumber;
 
     public TaskNotDocumentedException(Integer taskNumber) {
-        super();
-        this.taskNumber = taskNumber;
-    }
-
-    public TaskNotDocumentedException(Integer taskNumber, Exception e) {
-        super(e);
+        super("Task ["+taskNumber+"] not documented");
         this.taskNumber = taskNumber;
     }
 

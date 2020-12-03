@@ -16,25 +16,19 @@ public class Day3TobogganTrajectoryPart2 implements AOCTaskEvaluation {
 
     @Override
     public TaskResult run(Path input) throws TaskNotImplementedException {
-        try {
-            var expenseEntries = IO.readLinesAs(input, this::parseToRowPattern);
-            var start = LocalDateTime.now();
-            var result = algo(expenseEntries, List.of(
-                    new TraversalPattern(1, 1),
-                    new TraversalPattern(1, 3),
-                    new TraversalPattern(1, 5),
-                    new TraversalPattern(1, 7),
-                    new TraversalPattern(2, 1))
-            );
-            var stop = LocalDateTime.now();
+        var expenseEntries = IO.readLinesAs(input, this::parseToRowPattern);
+        var start = LocalDateTime.now();
+        var result = algo(expenseEntries, List.of(
+                new TraversalPattern(1, 1),
+                new TraversalPattern(1, 3),
+                new TraversalPattern(1, 5),
+                new TraversalPattern(1, 7),
+                new TraversalPattern(2, 1))
+        );
+        var stop = LocalDateTime.now();
 
-            if (result == -1) return new TaskResult(false, "Algo Didnt Work", Duration.between(start, stop));
-            else return new TaskResult(true, "Result is: " + result, Duration.between(start, stop));
-
-        } catch(Exception e) {
-            e.printStackTrace();
-            throw new TaskNotImplementedException(6);
-        }
+        if (result == -1) return new TaskResult(false, "Algo Didnt Work", Duration.between(start, stop));
+        else return new TaskResult(true, "Result is: " + result, Duration.between(start, stop));
     }
 
     private Long algo(List<Pattern> grid, List<TraversalPattern> patterns) {

@@ -16,18 +16,13 @@ public class Day3TobogganTrajectory implements AOCTaskEvaluation {
 
     @Override
     public TaskResult run(Path input) throws TaskNotImplementedException {
-        try {
-            var expenseEntries = IO.readLinesAs(input, this::parseToRowPattern);
-            var start = LocalDateTime.now();
-            var result = algo(expenseEntries);
-            var stop = LocalDateTime.now();
+        var expenseEntries = IO.readLinesAs(input, this::parseToRowPattern);
+        var start = LocalDateTime.now();
+        var result = algo(expenseEntries);
+        var stop = LocalDateTime.now();
 
-            if (result == -1) return new TaskResult(false, "Algo Didnt Work", Duration.between(start, stop));
-            else return new TaskResult(true, "Result is: " + result, Duration.between(start, stop));
-
-        } catch(Exception e) {
-            throw new TaskNotImplementedException(5);
-        }
+        if (result == -1) return new TaskResult(false, "Algo Didnt Work", Duration.between(start, stop));
+        else return new TaskResult(true, "Result is: " + result, Duration.between(start, stop));
     }
 
     private Integer algo(List<Pattern> grid) {

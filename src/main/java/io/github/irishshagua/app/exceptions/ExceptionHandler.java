@@ -17,7 +17,7 @@ public class ExceptionHandler implements CommandLine.IExitCodeExceptionMapper {
             return 11;
         } else {
             Output.print("Unexpected Error forced system to close", LogTarget.CONSOLE_ONLY, LogLevel.ERROR);
-            Output.print("Caught Unhandled [" + exception.getMessage() + "]", LogTarget.LOGS_ONLY, LogLevel.ERROR);
+            Output.logException("Caught Unhandled [" + exception.getMessage() + "]", exception);
             return 1;
         }
     }

@@ -46,20 +46,16 @@ public class TaskRunner {
             )
     );
 
-    public static TaskResult runTask(Integer taskNumber) throws TaskNotImplementedException {
+    public static TaskResult runTask(Integer taskNumber) {
         if (TASKS.containsKey(taskNumber)) {
             return TASKS.get(taskNumber).taskRunner().run(TASKS.get(taskNumber).taskInput());
         } else throw new TaskNotImplementedException(taskNumber);
     }
 
-    public static TaskResult describeTask(Integer taskNumber) throws TaskNotDocumentedException {
-        try {
-            if (TASKS.containsKey(taskNumber)) {
-                var taskDescription = IO.read(TASKS.get(taskNumber).taskDescription());
-                return new TaskResult(true, taskDescription, Duration.ZERO);
-            } else throw new TaskNotDocumentedException(taskNumber);
-        } catch (Exception e) {
-            throw new TaskNotDocumentedException(taskNumber, e);
-        }
+    public static TaskResult describeTask(Integer taskNumber) {
+        if (TASKS.containsKey(taskNumber)) {
+            var taskDescription = IO.read(TASKS.get(taskNumber).taskDescription());
+            return new TaskResult(true, taskDescription, Duration.ZERO);
+        } else throw new TaskNotDocumentedException(taskNumber);
     }
 }
