@@ -27,7 +27,7 @@ public class Day2PasswordPhilosophy implements AOCTaskEvaluation {
             else return new TaskResult(true, "Result is: " + result, Duration.between(start, stop));
 
         } catch(Exception e) {
-            throw new TaskNotImplementedException(1);
+            throw new TaskNotImplementedException(3);
         }
     }
 

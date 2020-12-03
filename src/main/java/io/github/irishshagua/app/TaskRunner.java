@@ -3,12 +3,9 @@ package io.github.irishshagua.app;
 import io.github.irishshagua.app.exceptions.TaskNotDocumentedException;
 import io.github.irishshagua.app.exceptions.TaskNotImplementedException;
 import io.github.irishshagua.app.io.IO;
-import io.github.irishshagua.tasks.challenge.Day1ReportRepair;
+import io.github.irishshagua.tasks.challenge.*;
 import io.github.irishshagua.tasks.TaskDetails;
 import io.github.irishshagua.tasks.TaskResult;
-import io.github.irishshagua.tasks.challenge.Day1ReportRepairPart2;
-import io.github.irishshagua.tasks.challenge.Day2PasswordPhilosophy;
-import io.github.irishshagua.tasks.challenge.Day2PasswordPhilosophyPart2;
 
 import java.nio.file.Paths;
 import java.time.Duration;
@@ -36,6 +33,16 @@ public class TaskRunner {
                     Paths.get("tasks/Day2PasswordPhilosophyPart2.desc"),
                     Paths.get("tasks/Day2PasswordPhilosophy.input"),
                     new Day2PasswordPhilosophyPart2()
+            ),
+            5, new TaskDetails(
+                    Paths.get("tasks/Day3TobogganTrajectory.desc"),
+                    Paths.get("tasks/Day3TobogganTrajectory.input"),
+                    new Day3TobogganTrajectory()
+            ),
+            6, new TaskDetails(
+                    Paths.get("tasks/Day3TobogganTrajectoryPart2.desc"),
+                    Paths.get("tasks/Day3TobogganTrajectory.input"),
+                    new Day3TobogganTrajectoryPart2()
             )
     );
 
