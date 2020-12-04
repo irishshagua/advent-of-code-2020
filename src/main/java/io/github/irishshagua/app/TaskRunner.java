@@ -43,6 +43,16 @@ public class TaskRunner {
                     Paths.get("tasks/Day3TobogganTrajectoryPart2.desc"),
                     Paths.get("tasks/Day3TobogganTrajectory.input"),
                     new Day3TobogganTrajectoryPart2()
+            ),
+            7, new TaskDetails(
+                    Paths.get("tasks/Day4PassportProcessing.desc"),
+                    Paths.get("tasks/Day4PassportProcessing.input"),
+                    new Day4PassportProcessing()
+            ),
+            8, new TaskDetails(
+                    Paths.get("tasks/Day4PassportProcessingPart2.desc"),
+                    Paths.get("tasks/Day4PassportProcessing.input"),
+                    new Day4PassportProcessingPart2()
             )
     );
 
