@@ -53,6 +53,16 @@ public class TaskRunner {
                     Paths.get("tasks/Day4PassportProcessingPart2.desc"),
                     Paths.get("tasks/Day4PassportProcessing.input"),
                     new Day4PassportProcessingPart2()
+            ),
+            9, new TaskDetails(
+                    Paths.get("tasks/Day5BinaryBoarding.desc"),
+                    Paths.get("tasks/Day5BinaryBoarding.input"),
+                    new Day5BinaryBoarding()
+            ),
+            10, new TaskDetails(
+                    Paths.get("tasks/Day5BinaryBoardingPart2.desc"),
+                    Paths.get("tasks/Day5BinaryBoarding.input"),
+                    new Day5BinaryBoardingPart2()
             )
     );
 
