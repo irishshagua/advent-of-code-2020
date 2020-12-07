@@ -75,6 +75,16 @@ public class TaskRunner {
                 Paths.get("tasks/Day6CustomCustoms.input"),
                 new Day6CustomCustomsPart2()
         ));
+        put(13, new TaskDetails(
+                Paths.get("tasks/Day7HandyHaversacks.desc"),
+                Paths.get("tasks/Day7HandyHaversacks.input"),
+                new Day7HandyHaversacks()
+        ));
+        put(14, new TaskDetails(
+                Paths.get("tasks/Day7HandyHaversacksPart2.desc"),
+                Paths.get("tasks/Day7HandyHaversacks.input"),
+                new Day7HandyHaversacksPart2()
+        ));
     }};
 
     public static TaskResult runTask(Integer taskNumber) {
