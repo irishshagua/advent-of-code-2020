@@ -95,6 +95,16 @@ public class TaskRunner {
                 Paths.get("tasks/Day8HandheldHalting.input"),
                 new Day8HandheldHaltingPart2()
         ));
+        put(17, new TaskDetails(
+                Paths.get("tasks/Day9EncodingError.desc"),
+                Paths.get("tasks/Day9EncodingError.input"),
+                new Day9EncodingError()
+        ));
+        put(18, new TaskDetails(
+                Paths.get("tasks/Day9EncodingErrorPart2.desc"),
+                Paths.get("tasks/Day9EncodingError.input"),
+                new Day9EncodingErrorPart2()
+        ));
     }};
 
     public static TaskResult runTask(Integer taskNumber) {
